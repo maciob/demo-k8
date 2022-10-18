@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: democrm
-        image: pwstaging/demo-crm:latest
+        image: adongy/hostname-docker
         ports:
         - containerPort: 3000
