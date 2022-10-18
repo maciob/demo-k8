@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: democrm-deployment
+  labels:
+    app: democrm
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: democrm
+  template:
+    metadata:
+      labels:
+        app: democrm
+    spec:
+      containers:
+      - name: democrm
+        image: pwstaging/demo-crm:latest
+        ports:
+        - containerPort: 3000
